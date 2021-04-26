@@ -1,43 +1,40 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import AppList from '../views/AppList.vue'
-import Login from '../views/Login.vue'
-import AppEventDetails from '../views/AppEventDetails.vue'
-import AppCreateEvent from '../views/AppCreateEvent.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import AppList from "../views/AppList.vue";
+import Login from "../views/Login.vue";
+import AppEventDetails from "../views/AppEventDetails.vue";
+import AppCreateEvent from "../views/AppCreateEvent.vue";
 
-
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'AppList',
-    component: AppList
+    path: "/",
+    name: "AppList",
+    component: AppList,
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: Login
+    path: "/login",
+    name: "Login",
+    component: Login,
   },
   {
-    path: '/create',
-    name: 'Create',
-    component: AppCreateEvent
+    path: "/create",
+    name: "Create",
+    component: AppCreateEvent,
   },
   {
-    path: '/Event/:id',
-    name: 'AppEventDetails',
+    path: "/event/:id",
+    name: "AppEventDetails",
     component: AppEventDetails,
-    props: true
-  }
-  
-]
+    props: true,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import EventServices from '@/services/EventServices.js'
+import Vue from "vue";
+import Vuex from "vuex";
+import EventServices from "@/services/EventServices.js";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
@@ -16,31 +16,30 @@ export default new Vuex.Store({
 
     SET_EVENT(state, event) {
       state.event = event;
-    }
+    },
   },
 
   actions: {
     setEvents({ commit }) {
       EventServices.getEvents()
-        .then(res => {
-          commit('SET_EVENTS', res.data);
+        .then((res) => {
+          commit("SET_EVENTS", res.data);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
-        })
+        });
     },
 
     setEvent({ commit }, id) {
       EventServices.getEventById(id)
-        .then(res => {
-          commit('SET_EVENT', res.data);
+        .then((res) => {
+          commit("SET_EVENT", res.data);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
-        })
-    }
+        });
+    },
   },
 
-  modules: {
-  }
-})
+  modules: {},
+});

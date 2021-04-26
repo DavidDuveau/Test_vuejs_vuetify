@@ -9,24 +9,9 @@
       <v-btn text rounded to="/login">Login</v-btn>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <router-view></router-view>
-    </v-content>
-   
-
-
-      <!-- <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn> -->
-
-    <!-- <v-main>
-      <HelloWorld/>
-    </v-main> -->
+    </v-main>
   </v-app>
 </template>
 

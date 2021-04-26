@@ -19,7 +19,7 @@ export default {
   },
 
   //WIP
-  addEvent(id) {
-    return apiClient.post();
+  addEvent(data) {
+    return apiClient.post("events" + data);
   },
 };
